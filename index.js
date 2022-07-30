@@ -1,10 +1,12 @@
 const Joi = require("joi");
-const { response } = require('express');
+const { response, urlencoded } = require('express');
 const express = require('express');
 
 const app = express();
 
 app.use(express.json());
+app.use(urlencoded({extended: true}));s
+app.use(express.static('public'));
 
 function validateCourse(course){
     const schema = {
