@@ -23,6 +23,7 @@ const courseSchema = new mongoose.Schema({
     }
 });
 
+
 const Course = mongoose.model('Course', courseSchema);
 async function createCourse() {
     const course = new Course({
